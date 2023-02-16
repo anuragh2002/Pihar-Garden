@@ -1,0 +1,167 @@
+body {
+  background-color: #48494b !important;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+* {
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 !important;
+} */
+
+/* Main Section */
+.logo {
+  height: 100px;
+  width: 380px;
+  margin-top: 10px;
+}
+.logo-img {
+  display: flex;
+  justify-content: center;
+}
+
+main h4 {
+  letter-spacing: -0.05em;
+  margin: 0 !important;
+}
+.primary-color {
+  color: #e0b138;
+}
+
+.secondary-color {
+  color: #ffffff;
+}
+
+/* Header */
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Showcase */
+
+.showcase {
+  display: flex;
+}
+
+/* Specials */
+
+.specials {
+  text-align: center;
+  width: 50%;
+}
+
+.specials h3 {
+  margin: 1rem;
+  margin-bottom: 2rem;
+}
+
+.specials-body {
+  display: flex;
+  justify-content: space-around;
+}
+
+.item {
+  background-color: #ffffff;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  overflow: hidden;
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative; */
+}
+
+.specials img {
+  height: 160px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.item-img img {
+  transition: 0.5s ease-in-out;
+  /* position: relative; */
+  overflow: hidden;
+}
+
+.item-img:hover img {
+  transform: scale(1.1);
+}
+
+.item h4 {
+  padding: 1rem 2rem;
+}
+/* .item-heading {
+  background-color: #ffffff;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  padding: 1rem 2rem;
+  z-index: 1;
+} */
+
+.specials p {
+  padding: 0rem 6rem;
+  margin-bottom: 2rem;
+}
+
+/* Order Form */
+
+/* .form {
+  display: flex;
+  /* flex-direction: column;
+  align-items: center; */
+/* } */
+
+.order-form {
+  text-align: center;
+  width: 50%;
+  height: auto;
+  padding: 0.75rem 1rem;
+}
+
+.order-form h3 {
+  margin-bottom: 1rem;
+}
+
+.form {
+  height: 200vh;
+  margin-bottom: 3rem;
+  box-shadow: 0px 0px 3px 2px #e0b138;
+}
+
+.label {
+  padding: 1rem;
+  text-align: left;
+}
+.label span {
+  color: red;
+  margin-right: 5px;
+}
+.label label {
+  color: #ffffff;
+  margin-left: 20px;
+}
+
+.input input {
+  width: 95%;
+  height: 5vh;
+  padding: 0rem 1rem;
+  border-radius: 20px;
+  border: none;
+}
+
+input:focus {
+  outline: 1px solid #108ee9;
+}
