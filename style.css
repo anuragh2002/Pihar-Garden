@@ -238,6 +238,14 @@ input:focus {
   color: #ffffff;
 }
 
+.normal-price {
+  text-decoration: line-through;
+  font-size: small;
+}
+.discount {
+  font-size: small;
+}
+
 .card-button {
   margin-left: auto;
   border: none;
@@ -246,4 +254,3 @@ input:focus {
   background-color: #e0b138;
   padding: 0.5rem 1rem;
 }
-
