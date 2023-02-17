@@ -136,7 +136,7 @@ main {
 }
 
 .form {
-  height: 200vh;
+  height: auto;
   margin-bottom: 3rem;
   box-shadow: 0px 0px 3px 2px #e0b138;
 }
@@ -165,3 +165,85 @@ main {
 input:focus {
   outline: 1px solid #108ee9;
 }
+
+#Accordion {
+  margin-top: 2rem;
+}
+
+.accordion-button {
+  background-color: #e0b138 !important;
+  color: #48494b !important;
+  font-weight: bold;
+}
+
+.accordion-button:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.accordion-button:not(.collapsed) {
+  color: #48494b !important;
+  background-color: #e0b138 !important;
+  box-shadow: none !important;
+}
+.accordion-button:not(.collapsed)::after {
+  background-image: url("pics/arrow.png") !important;
+  transform: rotate(90deg) !important;
+  font-weight: bold !important;
+}
+
+.accordion-button {
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: center !important;
+  /* margin-left: 2px; */
+}
+.accordion-button span {
+  margin-left: 10px;
+}
+.accordion-button::after {
+  margin-left: 0px !important;
+  width: 15px !important;
+  height: 15px !important;
+  background-image: url("pics/arrow.png") !important;
+  align-items: center !important;
+  background-size: 15px !important;
+}
+
+/* Accordion Body */
+.accordion-body {
+  background-color: #48494b;
+}
+.card {
+  background-color: #48494b !important;
+  padding: 0.5rem 1.2rem;
+  border: 1px solid #ffffff !important;
+  margin-bottom: 10px;
+}
+.card-price {
+  text-align: left;
+  margin: 0px;
+  color: #ffffff;
+}
+.card-heading {
+  text-align: left;
+  margin: 0px;
+  color: #ffffff;
+}
+.card-sub-heading {
+  font-weight: lighter;
+  font-size: small;
+  text-align: left;
+  margin: 0px;
+  color: #ffffff;
+}
+
+.card-button {
+  margin-left: auto;
+  border: none;
+  border-radius: 25px;
+  color: #48494b;
+  background-color: #e0b138;
+  padding: 0.5rem 1rem;
+}
+
