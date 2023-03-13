@@ -23,6 +23,11 @@
       integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
       crossorigin="anonymous"
     ></script>
+    <script
+      src="https://kit.fontawesome.com/73ba6c97c2.js"
+      crossorigin="anonymous"
+    ></script>
+    
   </head>
   <body>
     <main>
@@ -64,17 +69,16 @@
                 <form action="">
                     <div class="row">
                         <div class="label col-12">
-                            <label for="select-items "><span>*</span>Select Items from Menu Below:</label>
+                            <label for="search"><span>*</span>Select Items from Menu Below:</label>
                         </div>
                         <div class="input col-12">
-                            <input type="text" name="select-items" id="select-items" placeholder="Enter item name to search">
+                            <input type="search" name="search" id="search" placeholder="Enter item name to search" onkeyup="searchCards()">
                         </div>
-                       
                     </div>
 
                     <div class="container" id="accordion-container">
                       <div class="accordion" id="Accordion">
-                        <div class="accordion-item">
+                        <div class="accordion-item" id="anyTimeYouCanEat">
                           <h2 class="accordion-header" id="headingOne">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                               <span>
@@ -85,329 +89,191 @@
                           <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
                               <div class="card">
-                                <div class="row">
-                                  <div class="col-12">
-                                   <p class="card-heading">AALOO PARATHA - MASALA CURD</p>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row">
-                                    <p class="col-6 card-price">₹ 20</p>
-                                    <button class="col-2 card-button">Add</button>
-                                    </div>
-                                  </div>
+                                <div class="content">
+                                 <h6 class="card-heading" id="header">AALOO PARATHA - MASALA CURD</h6>
+                                 <p class="col-12 card-price">₹ 20</p>
                                 </div>
-                              </div>
+                                <button class="col-2 card-button">Add</button>              
+                            </div>
 
-                              <div class="card">
-                                <div class="row">
-                                  <div class="col-12">
-                                   <p class="card-heading">CHEESE DHOSA</p>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row">
-                                    <p class="col-6 card-price">₹ 100</p>
-                                    <button class="col-2 card-button">Add</button>
-                                    </div>
-                                  </div>
-                                </div>
+                            <div class="card">
+                              <div class="content">
+                               <h6 class="card-heading" id="header">CHEESE DHOSA</h6>
+                               <p class="col-12 card-price">₹ 100</p>
                               </div>
+                              <button class="col-2 card-button">Add</button>              
+                          </div>
 
-                              <div class="card">
-                                <div class="row">
-                                  <div class="col-12">
-                                   <p class="card-heading">CHICKEN PARATHA - MASALA CURD</p>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row">
-                                    <p class="col-6 card-price">₹ 40</p>
-                                    <button class="col-2 card-button">Add</button>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
+                          <div class="card">
+                            <div class="content">
+                             <h6 class="card-heading" id="header">COFFEE </h6>
+                             <h6 class="card-sub-heading"> PER PCS</h6>
+                             <p class="col-12 card-price">₹ 20 <span class="normal-price">₹20</span><span class="discount">(0%)</span></p>
+                            </div>
+                            <button class="col-2 card-button">Add</button>              
+                        </div>
 
-                              <div class="card">
-                                <div class="row">
-                                  <div class="col-12">
-                                   <p class="card-heading">COFFEE</p>
-                                   <p class="card-sub-heading">PER PCS</p>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row">
-                                    <p class="col-6 card-price">₹ 20 <span class="normal-price">₹20</span><span class="discount">(0%)</span></p>
-                                    <button class="col-2 card-button">Add</button>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
+                        <div class="card">
+                          <div class="content">
+                           <h6 class="card-heading" id="header">COLD50</h6>
+                           <h6 class="card-sub-heading"> PER PCS</h6>
+                           <p class="col-12 card-price">₹ 40</p>
+                          </div>
+                          <button class="col-2 card-button">Add</button>              
+                      </div>
 
-                              <div class="card">
-                                <div class="row">
-                                  <div class="col-12">
-                                   <p class="card-heading">COLD50</p>
-                                   <p class="card-sub-heading">PER PCS</p>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row">
-                                    <p class="col-6 card-price">₹ 50 <span class="normal-price">₹50</span><span class="discount">(0%)</span></p>
-                                    <button class="col-2 card-button">Add</button>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
+                      <div class="card">
+                        <div class="content">
+                         <h6 class="card-heading" id="header">DELIVERY 3-10 KM</h6>
+                         <h6 class="card-sub-heading"> PER PCS</h6>
+                         <p class="col-12 card-price">₹ 60 <span class="normal-price">₹60</span><span class="discount">(0%)</span></p>
+                        </div>
+                        <button class="col-2 card-button">Add</button>              
+                      </div>
 
-                              <div class="card">
-                                <div class="row">
-                                  <div class="col-12">
-                                   <p class="card-heading">DELIVERY 3-10 KM</p>
-                                   <p class="card-sub-heading">PER PCS</p>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row">
-                                    <p class="col-6 card-price">₹ 60 <span class="normal-price">₹60</span><span class="discount">(0%)</span></p>
-                                    <button class="col-2 card-button">Add</button>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
+                    <div class="card">
+                      <div class="content">
+                       <h6 class="card-heading" id="header">FISH FRY</h6>
+                       <h6 class="card-sub-heading"> PER PCS</h6>
+                       <p class="col-12 card-price">₹ 20 <span class="normal-price">₹20</span><span class="discount">(0%)</span></p>
+                      </div>
+                      <button class="col-2 card-button">Add</button>              
+                  </div>
 
-                              <div class="card">
-                                <div class="row">
-                                  <div class="col-12">
-                                   <p class="card-heading">FISH FRY</p>
-                                   <p class="card-sub-heading">PER PCS</p>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row">
-                                    <p class="col-6 card-price">₹ 20 <span class="normal-price">₹20</span><span class="discount">(0%)</span></p>
-                                    <button class="col-2 card-button">Add</button>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
+                  
 
-                              <div class="card">
-                                <div class="row">
-                                  <div class="col-12">
-                                   <p class="card-heading">HAKKA NOODLES FULL</p>
-                                   <p class="card-sub-heading">PER PCS</p>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row">
-                                    <p class="col-6 card-price">₹ 60 <span class="normal-price">₹60</span><span class="discount">(0%)</span></p>
-                                    <button class="col-2 card-button">Add</button>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
+                <div class="card">
+                  <div class="content">
+                   <h6 class="card-heading" id="header">HAKKA NOODLES FULL</h6>
+                   <h6 class="card-sub-heading"> PER PCS</h6>
+                   <p class="col-12 card-price">₹ 60 <span class="normal-price">₹60</span><span class="discount">(0%)</span></p>
+                  </div>
+                  <button class="col-2 card-button">Add</button>              
+              </div>
 
-                              <div class="card">
-                                <div class="row">
-                                  <div class="col-12">
-                                   <p class="card-heading">IDLI</p>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row">
-                                    <p class="col-6 card-price">₹ 30</p>
-                                    <button class="col-2 card-button">Add</button>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
+              <div class="card">
+                <div class="content">
+                 <h6 class="card-heading" id="header">IDLI</h6>
+                 <p class="col-12 card-price">₹ 30</p>
+                </div>
+                <button class="col-2 card-button">Add</button>              
+            </div>
 
-                              <div class="card">
-                                <div class="row">
-                                  <div class="col-12">
-                                   <p class="card-heading">KADHAI CHICKEN 500G</p>
-                                   <p class="card-sub-heading">PER PCS</p>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row">
-                                    <p class="col-6 card-price">₹ 320 <span class="normal-price">₹320</span><span class="discount">(0%)</span></p>
-                                    <button class="col-2 card-button">Add</button>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
+            <div class="card">
+              <div class="content">
+               <h6 class="card-heading" id="header">KADHAI CHICKEN 500G</h6>
+               <h6 class="card-sub-heading"> PER PCS</h6>
+               <p class="col-12 card-price">₹ 320 <span class="normal-price">₹320</span><span class="discount">(0%)</span></p>
+              </div>
+              <button class="col-2 card-button">Add</button>              
+          </div>
 
-                              <div class="card">
-                                <div class="row">
-                                  <div class="col-12">
-                                   <p class="card-heading">MASALA DHOSA - SAMBHAR - CHATNI</p>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row">
-                                    <p class="col-6 card-price">₹ 60</p>
-                                    <button class="col-2 card-button">Add</button>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
+          <div class="card">
+            <div class="content">
+             <h6 class="card-heading" id="header">MASALA DHOSA - SAMBHAR - CHATNI</h6>
+             <p class="col-12 card-price">₹ 60</p>
+            </div>
+            <button class="col-2 card-button">Add</button>              
+        </div>
 
-                              <div class="card">
-                                <div class="row">
-                                  <div class="col-12">
-                                   <p class="card-heading">MUTTON MAKING CHARGE</p>
-                                   <p class="card-sub-heading">1KG</p>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row">
-                                    <p class="col-6 card-price">₹ 220 <span class="normal-price">₹220</span><span class="discount">(0%)</span></p>
-                                    <button class="col-2 card-button">Add</button>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
+        <div class="card">
+          <div class="content">
+           <h6 class="card-heading" id="header">MUTTON MAKING CHARGE</h6>
+           <h6 class="card-sub-heading">1KG</h6>
+           <p class="col-12 card-price">₹ 220 <span class="normal-price">₹220</span><span class="discount">(0%)</span></p>
+          </div>
+          <button class="col-2 card-button">Add</button>              
+        </div>
+              
+        <div class="card">
+          <div class="content">
+           <h6 class="card-heading" id="header">ONION PARATHA</h6>
+           <p class="col-12 card-price">₹ 20</p>
+          </div>
+          <button class="col-2 card-button">Add</button>              
+      </div>
 
-                              <div class="card">
-                                <div class="row">
-                                  <div class="col-12">
-                                   <p class="card-heading">ONION PARATHA</p>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row">
-                                    <p class="col-6 card-price">₹ 20</p>
-                                    <button class="col-2 card-button">Add</button>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
+      <div class="card">
+        <div class="content">
+         <h6 class="card-heading" id="header">PANEER DHOSA - SAMBHAR - CHATNI</h6>
+         <p class="col-12 card-price">₹ 100</p>
+        </div>
+        <button class="col-2 card-button">Add</button>              
+      </div>                  
+              
+      <div class="card">
+        <div class="content">
+         <h6 class="card-heading" id="header">PANEER PARATHA - MASALA CURD</h6>
+         <p class="col-12 card-price">₹ 50</p>
+        </div>
+        <button class="col-2 card-button">Add</button>              
+      </div>
 
-                              <div class="card">
-                                <div class="row">
-                                  <div class="col-12">
-                                   <p class="card-heading">PANEER DHOSA - SAMBHAR - CHATNI</p>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row">
-                                    <p class="col-6 card-price">₹ 100</p>
-                                    <button class="col-2 card-button">Add</button>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
+      <div class="card">
+        <div class="content">
+         <h6 class="card-heading" id="header">PANEER UTTAPAM</h6>
+         <p class="col-12 card-price">₹ 100</p>
+        </div>
+        <button class="col-2 card-button">Add</button>              
+      </div>                       
 
-                              <div class="card">
-                                <div class="row">
-                                  <div class="col-12">
-                                   <p class="card-heading">PANEER PARATHA - MASALA CURD</p>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row">
-                                    <p class="col-6 card-price">₹ 50</p>
-                                    <button class="col-2 card-button">Add</button>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
+      <div class="card">
+        <div class="content">
+         <h6 class="card-heading" id="header">PAPER DHOSA - SAMBHAR</h6>
+         <p class="col-12 card-price">₹ 40</p>
+        </div>
+        <button class="col-2 card-button">Add</button>              
+      </div>                           
 
-                              <div class="card">
-                                <div class="row">
-                                  <div class="col-12">
-                                   <p class="card-heading">PANEER UTTAPAM</p>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row">
-                                    <p class="col-6 card-price">₹ 100</p>
-                                    <button class="col-2 card-button">Add</button>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
+      <div class="card">
+        <div class="content">
+         <h6 class="card-heading" id="header">RED BULL</h6>
+         <h6 class="card-sub-heading">PER PCS</h6>
+         <p class="col-12 card-price">₹ 130 <span class="normal-price">₹130</span><span class="discount">(0%)</span></p>
+        </div>
+        <button class="col-2 card-button">Add</button>              
+      </div>                     
 
-                              <div class="card">
-                                <div class="row">
-                                  <div class="col-12">
-                                   <p class="card-heading">PAPER DHOSA - SAMBHAR</p>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row">
-                                    <p class="col-6 card-price">₹ 40</p>
-                                    <button class="col-2 card-button">Add</button>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
+      <div class="card">
+        <div class="content">
+         <h6 class="card-heading" id="header">TEA</h6>
+         <h6 class="card-sub-heading">PER PCS</h6>
+         <p class="col-12 card-price">₹ 10 <span class="normal-price">₹10</span><span class="discount">(0%)</span></p>
+        </div>
+        <button class="col-2 card-button">Add</button>              
+      </div>                       
 
-                              <div class="card">
-                                <div class="row">
-                                  <div class="col-12">
-                                   <p class="card-heading">RED BULL</p>
-                                   <p class="card-sub-heading">PER PCS</p>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row">
-                                    <p class="col-6 card-price">₹ 130 <span class="normal-price">₹130</span><span class="discount">(0%)</span></p>
-                                    <button class="col-2 card-button">Add</button>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
+      <div class="card">
+        <div class="content">
+         <h6 class="card-heading" id="header">VEG UTTAPAM</h6>
+         <p class="col-12 card-price">₹ 50</p>
+        </div>
+        <button class="col-2 card-button">Add</button>              
+      </div>                        
 
-                              <div class="card">
-                                <div class="row">
-                                  <div class="col-12">
-                                   <p class="card-heading">TEA</p>
-                                   <p class="card-sub-heading">PER PCS</p>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row">
-                                    <p class="col-6 card-price">₹ 10 <span class="normal-price">₹10</span><span class="discount">(0%)</span></p>
-                                    <button class="col-2 card-button">Add</button>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-
-                              <div class="card">
-                                <div class="row">
-                                  <div class="col-12">
-                                   <p class="card-heading">VEG UTTAPAM</p>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row">
-                                    <p class="col-6 card-price">₹ 50</p>
-                                    <button class="col-2 card-button">Add</button>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-
-                              <div class="card">
-                                <div class="row">
-                                  <div class="col-12">
-                                   <p class="card-heading">WATER 15</p>
-                                   <p class="card-sub-heading">PER PCS</p>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row">
-                                    <p class="col-6 card-price">₹ 15 <span class="normal-price">₹15</span><span class="discount">(0%)</span></p>
-                                    <button class="col-2 card-button">Add</button>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-
-                              <div class="card">
-                                <div class="row">
-                                  <div class="col-12">
-                                   <p class="card-heading">STRING 25</p>
-                                   <p class="card-sub-heading">PER PCS</p>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row">
-                                    <p class="col-6 card-price">₹ 25 <span class="normal-price">₹25</span><span class="discount">(0%)</span></p>
-                                    <button class="col-2 card-button">Add</button>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
+      <div class="card">
+        <div class="content">
+         <h6 class="card-heading" id="header">WATER 15</h6>
+         <h6 class="card-sub-heading">PER PCS</h6>
+         <p class="col-12 card-price">₹ 15 <span class="normal-price">₹15</span><span class="discount">(0%)</span></p>
+        </div>
+        <button class="col-2 card-button">Add</button>              
+      </div>                       
+                      
+      <div class="card">
+        <div class="content">
+         <h6 class="card-heading" id="header">STRING 25</h6>
+         <h6 class="card-sub-heading">PER PCS</h6>
+         <p class="col-12 card-price">₹ 25 <span class="normal-price">₹25</span><span class="discount">(0%)</span></p>
+        </div>
+        <button class="col-2 card-button">Add</button>              
+      </div> 
 
                             </div>
                           </div>
                         </div>
 
-                        <div class="accordion-item">
+                        <div class="accordion-item" id="lunchVegThali">
                           <h2 class="accordion-header" id="headingTwo">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                               <span>
@@ -417,52 +283,36 @@
                           </h2>
                           <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
+                              
                               <div class="card">
-                                <div class="row">
-                                  <div class="col-12">
-                                   <p class="card-heading">LUNCH VEG THALI</p>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row">
-                                    <p class="col-6 card-price">₹ 40</p>
-                                    <button class="col-2 card-button">Add</button>
-                                    </div>
-                                  </div>
+                                <div class="content">
+                                 <h6 class="card-heading" id="header">LUNCH VEG THALI</h6>
+                                 <p class="col-12 card-price">₹ 40</p>
                                 </div>
+                                <button class="col-2 card-button">Add</button>              
+                              </div>      
+
+                              <div class="card">
+                                <div class="content">
+                                 <h6 class="card-heading" id="header">RICE</h6>
+                                 <p class="col-12 card-price">₹ 20</p>
+                                </div>
+                                <button class="col-2 card-button">Add</button>              
                               </div>
 
                               <div class="card">
-                                <div class="row">
-                                  <div class="col-12">
-                                   <p class="card-heading">RICE</p>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row">
-                                    <p class="col-6 card-price">₹ 20</p>
-                                    <button class="col-2 card-button">Add</button>
-                                    </div>
-                                  </div>
+                                <div class="content">
+                                 <h6 class="card-heading" id="header">SALAD</h6>
+                                 <p class="col-12 card-price">₹ 20</p>
                                 </div>
+                                <button class="col-2 card-button">Add</button>              
                               </div>
 
-                              <div class="card">
-                                <div class="row">
-                                  <div class="col-12">
-                                   <p class="card-heading">SALAD</p>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row">
-                                    <p class="col-6 card-price">₹ 20</p>
-                                    <button class="col-2 card-button">Add</button>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
                             </div>
                           </div>
                         </div>
 
-                        <div class="accordion-item">
+                        <div class="accordion-item" id="nonVeg">
                           <h2 class="accordion-header" id="headingThree">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                               <span>Non Veg</span>
@@ -472,137 +322,83 @@
                             <div class="accordion-body">
 
                               <div class="card">
-                                <div class="row">
-                                  <div class="col-12">
-                                   <p class="card-heading">BUTTER CHICKEN 1KG</p>
-                                   <p class="card-sub-heading">1KG</p>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row">
-                                    <p class="col-6 card-price">₹ 600 <span class="normal-price">₹600</span><span class="discount">(0%)</span></p>
-                                    <button class="col-2 card-button">Add</button>
-                                    </div>
-                                  </div>
+                                <div class="content">
+                                 <h6 class="card-heading" id="header">BUTTER CHICKEN 1KG</h6>
+                                 <h6 class="card-sub-heading">1KG</h6>
+                                 <p class="col-12 card-price">₹ 600 <span class="normal-price">₹600</span><span class="discount">(0%)</span></p>
                                 </div>
+                                <button class="col-2 card-button">Add</button>              
                               </div>
                               
                               <div class="card">
-                                <div class="row">
-                                  <div class="col-12">
-                                   <p class="card-heading">BUTTER CHICKEN MASALA FULL (4 PCS)</p>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row">
-                                    <p class="col-6 card-price">₹ 180</p>
-                                    <button class="col-2 card-button">Add</button>
-                                    </div>
-                                  </div>
+                                <div class="content">
+                                 <h6 class="card-heading" id="header">BUTTER CHICKEN MASALA FULL (4 PCS)</h6>
+                                 <p class="col-12 card-price">₹ 180</p>
                                 </div>
+                                <button class="col-2 card-button">Add</button>              
                               </div>
 
                               <div class="card">
-                                <div class="row">
-                                  <div class="col-12">
-                                   <p class="card-heading">BUTTER CHICKEN MASALA HALF (2PCS)</p>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row">
-                                    <p class="col-6 card-price">₹ 90</p>
-                                    <button class="col-2 card-button">Add</button>
-                                    </div>
-                                  </div>
+                                <div class="content">
+                                 <h6 class="card-heading" id="header">BUTTER CHICKEN MASALA HALF (2PCS)</h6>
+                                 <p class="col-12 card-price">₹ 90</p>
                                 </div>
+                                <button class="col-2 card-button">Add</button>              
                               </div>
 
                               <div class="card">
-                                <div class="row">
-                                  <div class="col-12">
-                                   <p class="card-heading">CHICKEN CURRY FULL (4 PCS)</p>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row">
-                                    <p class="col-6 card-price">₹ 160</p>
-                                    <button class="col-2 card-button">Add</button>
-                                    </div>
-                                  </div>
+                                <div class="content">
+                                 <h6 class="card-heading" id="header">CHICKEN CURRY FULL (4 PCS)</h6>
+                                 <p class="col-12 card-price">₹ 160</p>
                                 </div>
+                                <button class="col-2 card-button">Add</button>              
                               </div>
 
                               <div class="card">
-                                <div class="row">
-                                  <div class="col-12">
-                                   <p class="card-heading">CHICKEN CURRY HALF (2 PCS)</p>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row">
-                                    <p class="col-6 card-price">₹ 80</p>
-                                    <button class="col-2 card-button">Add</button>
-                                    </div>
-                                  </div>
+                                <div class="content">
+                                 <h6 class="card-heading" id="header">CHICKEN CURRY HALF (2 PCS)</h6>
+                                 <p class="col-12 card-price">₹ 80</p>
                                 </div>
+                                <button class="col-2 card-button">Add</button>              
                               </div>
 
                               <div class="card">
-                                <div class="row">
-                                  <div class="col-12">
-                                   <p class="card-heading">CHICKEN KASSA FULL (4 PCS)</p>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row">
-                                    <p class="col-6 card-price">₹ 180</p>
-                                    <button class="col-2 card-button">Add</button>
-                                    </div>
-                                  </div>
+                                <div class="content">
+                                 <h6 class="card-heading" id="header">CHICKEN KASSA FULL (4 PCS)</h6>
+                                 <p class="col-12 card-price">₹ 180</p>
                                 </div>
+                                <button class="col-2 card-button">Add</button>              
                               </div>
 
                               <div class="card">
-                                <div class="row">
-                                  <div class="col-12">
-                                   <p class="card-heading">CHICKEN KASSA HALF (2 PCS)</p>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row">
-                                    <p class="col-6 card-price">₹ 90</p>
-                                    <button class="col-2 card-button">Add</button>
-                                    </div>
-                                  </div>
+                                <div class="content">
+                                 <h6 class="card-heading" id="header">CHICKEN KASSA HALF (2 PCS)</h6>
+                                 <p class="col-12 card-price">₹ 90</p>
                                 </div>
+                                <button class="col-2 card-button">Add</button>              
                               </div>
 
                               <div class="card">
-                                <div class="row">
-                                  <div class="col-12">
-                                   <p class="card-heading">EGG CURRY FULL (4 PCS)</p>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row">
-                                    <p class="col-6 card-price">₹ 100</p>
-                                    <button class="col-2 card-button">Add</button>
-                                    </div>
-                                  </div>
+                                <div class="content">
+                                 <h6 class="card-heading" id="header">EGG CURRY FULL (4 PCS)</h6>
+                                 <p class="col-12 card-price">₹ 100</p>
                                 </div>
+                                <button class="col-2 card-button">Add</button>              
                               </div>
 
                               <div class="card">
-                                <div class="row">
-                                  <div class="col-12">
-                                   <p class="card-heading">EGG CURRY HALF (2 PCS)</p>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row">
-                                    <p class="col-6 card-price">₹ 50</p>
-                                    <button class="col-2 card-button">Add</button>
-                                    </div>
-                                  </div>
+                                <div class="content">
+                                 <h6 class="card-heading" id="header">EGG CURRY HALF (2 PCS)</h6>
+                                 <p class="col-12 card-price">₹ 50</p>
                                 </div>
+                                <button class="col-2 card-button">Add</button>              
                               </div>
 
                             </div>
                           </div>
                         </div>
 
-                        <div class="accordion-item">
+                        <div class="accordion-item" id="chicken">
                           <h2 class="accordion-header" id="headingFour">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
                               <span>
@@ -614,66 +410,42 @@
                             <div class="accordion-body">
                               
                               <div class="card">
-                                <div class="row">
-                                  <div class="col-12">
-                                   <p class="card-heading">HANDI CHICKEN 1PC</p>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row">
-                                    <p class="col-6 card-price">₹ 40</p>
-                                    <button class="col-2 card-button">Add</button>
-                                    </div>
-                                  </div>
+                                <div class="content">
+                                 <h6 class="card-heading" id="header">HANDI CHICKEN 1PC</h6>
+                                 <p class="col-12 card-price">₹ 40</p>
                                 </div>
+                                <button class="col-2 card-button">Add</button>              
                               </div>
 
                               <div class="card">
-                                <div class="row">
-                                  <div class="col-12">
-                                   <p class="card-heading">HANDI CHICKEN 1kg</p>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row">
-                                    <p class="col-6 card-price">₹ 540 <span class="normal-price">₹540</span><span class="discount">(0%)</span></p>
-                                    <button class="col-2 card-button">Add</button>
-                                    </div>
-                                  </div>
+                                <div class="content">
+                                 <h6 class="card-heading" id="header">HANDI CHICKEN 1kg</h6>
+                                 <p class="col-12 card-price">₹ 540 <span class="normal-price">₹540</span><span class="discount">(0%)</span></p>
                                 </div>
+                                <button class="col-2 card-button">Add</button>              
                               </div>
 
                               <div class="card">
-                                <div class="row">
-                                  <div class="col-12">
-                                   <p class="card-heading">HANDI CHICKEN 500g</p>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row">
-                                    <p class="col-6 card-price">₹ 300</p>
-                                    <button class="col-2 card-button">Add</button>
-                                    </div>
-                                  </div>
+                                <div class="content">
+                                 <h6 class="card-heading" id="header">HANDI CHICKEN 500g</h6>
+                                 <p class="col-12 card-price">₹ 300</p>
                                 </div>
+                                <button class="col-2 card-button">Add</button>              
                               </div>
-                              
+
                               <div class="card">
-                                <div class="row">
-                                  <div class="col-12">
-                                   <p class="card-heading">CHICKEN CURRY HALF (2 PCS)</p>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row">
-                                    <p class="col-6 card-price">₹ 80</p>
-                                    <button class="col-2 card-button">Add</button>
-                                    </div>
-                                  </div>
+                                <div class="content">
+                                 <h6 class="card-heading" id="header">CHICKEN CURRY HALF (2 PCS)</h6>
+                                 <p class="col-12 card-price">₹ 80</p>
                                 </div>
+                                <button class="col-2 card-button">Add</button>              
                               </div>
 
                             </div>
                           </div>
                         </div>
 
-                        <div class="accordion-item">
+                        <div class="accordion-item" id="biryani">
                           <h2 class="accordion-header" id="headingFive">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
                               <span>
@@ -685,122 +457,74 @@
                             <div class="accordion-body">
                              
                               <div class="card">
-                                <div class="row">
-                                  <div class="col-12">
-                                   <p class="card-heading">CHICKEN BIRYANI FULL</p>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row">
-                                    <p class="col-6 card-price">₹ 140</p>
-                                    <button class="col-2 card-button">Add</button>
-                                    </div>
-                                  </div>
+                                <div class="content">
+                                 <h6 class="card-heading" id="header">CHICKEN BIRYANI FULL</h6>
+                                 <p class="col-12 card-price">₹ 140</p>
                                 </div>
+                                <button class="col-2 card-button">Add</button>              
                               </div>
 
                               <div class="card">
-                                <div class="row">
-                                  <div class="col-12">
-                                   <p class="card-heading">CHICKEN BIRYANI HALF</p>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row">
-                                    <p class="col-6 card-price">₹ 80</p>
-                                    <button class="col-2 card-button">Add</button>
-                                    </div>
-                                  </div>
+                                <div class="content">
+                                 <h6 class="card-heading" id="header">CHICKEN BIRYANI HALF</h6>
+                                 <p class="col-12 card-price">₹ 80</p>
                                 </div>
+                                <button class="col-2 card-button">Add</button>              
                               </div>
 
                               <div class="card">
-                                <div class="row">
-                                  <div class="col-12">
-                                   <p class="card-heading">EGG BIRYANI FULL</p>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row">
-                                    <p class="col-6 card-price">₹ 100</p>
-                                    <button class="col-2 card-button">Add</button>
-                                    </div>
-                                  </div>
+                                <div class="content">
+                                 <h6 class="card-heading" id="header">EGG BIRYANI FULL</h6>
+                                 <p class="col-12 card-price">₹ 100</p>
                                 </div>
+                                <button class="col-2 card-button">Add</button>              
                               </div>
 
                               <div class="card">
-                                <div class="row">
-                                  <div class="col-12">
-                                   <p class="card-heading">EGG BIRYANI HALF</p>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row">
-                                    <p class="col-6 card-price">₹ 60</p>
-                                    <button class="col-2 card-button">Add</button>
-                                    </div>
-                                  </div>
+                                <div class="content">
+                                 <h6 class="card-heading" id="header">EGG BIRYANI HALF</h6>
+                                 <p class="col-12 card-price">₹ 60</p>
                                 </div>
+                                <button class="col-2 card-button">Add</button>              
                               </div>
 
                               <div class="card">
-                                <div class="row">
-                                  <div class="col-12">
-                                   <p class="card-heading">HANDI CHICKEN BIRYANI FULL</p>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row">
-                                    <p class="col-6 card-price">₹ 160</p>
-                                    <button class="col-2 card-button">Add</button>
-                                    </div>
-                                  </div>
+                                <div class="content">
+                                 <h6 class="card-heading" id="header">HANDI CHICKEN BIRYANI FULL</h6>
+                                 <p class="col-12 card-price">₹ 160</p>
                                 </div>
+                                <button class="col-2 card-button">Add</button>              
                               </div>
 
                               <div class="card">
-                                <div class="row">
-                                  <div class="col-12">
-                                   <p class="card-heading">HANDI CHICKEN BIRYANI HALF</p>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row">
-                                    <p class="col-6 card-price">₹ 90</p>
-                                    <button class="col-2 card-button">Add</button>
-                                    </div>
-                                  </div>
+                                <div class="content">
+                                 <h6 class="card-heading" id="header">HANDI CHICKEN BIRYANI HALF</h6>
+                                 <p class="col-12 card-price">₹ 90</p>
                                 </div>
+                                <button class="col-2 card-button">Add</button>              
                               </div>
 
                               <div class="card">
-                                <div class="row">
-                                  <div class="col-12">
-                                   <p class="card-heading">VEG BIRYANI FULL</p>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row">
-                                    <p class="col-6 card-price">₹ 160</p>
-                                    <button class="col-2 card-button">Add</button>
-                                    </div>
-                                  </div>
+                                <div class="content">
+                                 <h6 class="card-heading" id="header">VEG BIRYANI FULL</h6>
+                                 <p class="col-12 card-price">₹ 160</p>
                                 </div>
+                                <button class="col-2 card-button">Add</button>              
                               </div>
 
                               <div class="card">
-                                <div class="row">
-                                  <div class="col-12">
-                                   <p class="card-heading">VEG BIRYANI HALF</p>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row">
-                                    <p class="col-6 card-price">₹ 90</p>
-                                    <button class="col-2 card-button">Add</button>
-                                    </div>
-                                  </div>
+                                <div class="content">
+                                 <h6 class="card-heading" id="header">VEG BIRYANI HALF</h6>
+                                 <p class="col-12 card-price">₹ 90</p>
                                 </div>
+                                <button class="col-2 card-button">Add</button>              
                               </div>
 
                             </div>
                           </div>
                         </div>
 
-                        <div class="accordion-item">
+                        <div class="accordion-item" id="veg">
                           <h2 class="accordion-header" id="headingSix">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
                               <span>
@@ -810,207 +534,123 @@
                           </h2>
                           <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
+
                               <div class="card">
-                                <div class="row">
-                                  <div class="col-12">
-                                   <p class="card-heading">BUTTER PANEER MASALA FULL</p>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row">
-                                    <p class="col-6 card-price">₹ 160</p>
-                                    <button class="col-2 card-button">Add</button>
-                                    </div>
-                                  </div>
+                                <div class="content">
+                                 <h6 class="card-heading" id="header">BUTTER PANEER MASALA FULL</h6>
+                                 <p class="col-12 card-price">₹ 160</p>
                                 </div>
+                                <button class="col-2 card-button">Add</button>              
                               </div>
 
                               <div class="card">
-                                <div class="row">
-                                  <div class="col-12">
-                                   <p class="card-heading">BUTTER PANEER MASALA HALF</p>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row">
-                                    <p class="col-6 card-price">₹ 80</p>
-                                    <button class="col-2 card-button">Add</button>
-                                    </div>
-                                  </div>
+                                <div class="content">
+                                 <h6 class="card-heading" id="header">BUTTER PANEER MASALA HALF</h6>
+                                 <p class="col-12 card-price">₹ 80</p>
                                 </div>
+                                <button class="col-2 card-button">Add</button>              
                               </div>
 
                               <div class="card">
-                                <div class="row">
-                                  <div class="col-12">
-                                   <p class="card-heading">DAL FRY FULL</p>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row">
-                                    <p class="col-6 card-price">₹ 80</p>
-                                    <button class="col-2 card-button">Add</button>
-                                    </div>
-                                  </div>
+                                <div class="content">
+                                 <h6 class="card-heading" id="header">DAL FRY FULL</h6>
+                                 <p class="col-12 card-price">₹ 80</p>
                                 </div>
+                                <button class="col-2 card-button">Add</button>              
                               </div>
 
                               <div class="card">
-                                <div class="row">
-                                  <div class="col-12">
-                                   <p class="card-heading">DAL FRY HALF</p>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row">
-                                    <p class="col-6 card-price">₹ 40</p>
-                                    <button class="col-2 card-button">Add</button>
-                                    </div>
-                                  </div>
+                                <div class="content">
+                                 <h6 class="card-heading" id="header">DAL FRY HALF</h6>
+                                 <p class="col-12 card-price">₹ 40</p>
                                 </div>
+                                <button class="col-2 card-button">Add</button>              
                               </div>
 
                               <div class="card">
-                                <div class="row">
-                                  <div class="col-12">
-                                   <p class="card-heading">DAL MAKHANI FULL</p>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row">
-                                    <p class="col-6 card-price">₹ 80</p>
-                                    <button class="col-2 card-button">Add</button>
-                                    </div>
-                                  </div>
+                                <div class="content">
+                                 <h6 class="card-heading" id="header">DAL MAKHANI FULL</h6>
+                                 <p class="col-12 card-price">₹ 80</p>
                                 </div>
+                                <button class="col-2 card-button">Add</button>              
                               </div>
 
                               <div class="card">
-                                <div class="row">
-                                  <div class="col-12">
-                                   <p class="card-heading">DAL MAKHANI HALF</p>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row">
-                                    <p class="col-6 card-price">₹ 40</p>
-                                    <button class="col-2 card-button">Add</button>
-                                    </div>
-                                  </div>
+                                <div class="content">
+                                 <h6 class="card-heading" id="header">DAL MAKHANI HALF</h6>
+                                 <p class="col-12 card-price">₹ 40</p>
                                 </div>
+                                <button class="col-2 card-button">Add</button>              
                               </div>
 
                               <div class="card">
-                                <div class="row">
-                                  <div class="col-12">
-                                   <p class="card-heading">KADHAI PANEER MASALA FULL</p>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row">
-                                    <p class="col-6 card-price">₹ 160</p>
-                                    <button class="col-2 card-button">Add</button>
-                                    </div>
-                                  </div>
+                                <div class="content">
+                                 <h6 class="card-heading" id="header">KADHAI PANEER MASALA FULL</h6>
+                                 <p class="col-12 card-price">₹ 160</p>
                                 </div>
+                                <button class="col-2 card-button">Add</button>              
+                              </div>
+                              <div class="card">
+                                <div class="content">
+                                 <h6 class="card-heading" id="header">KADHAI PANEER MASALA HALF</h6>
+                                 <p class="col-12 card-price">₹ 80</p>
+                                </div>
+                                <button class="col-2 card-button">Add</button>              
                               </div>
 
                               <div class="card">
-                                <div class="row">
-                                  <div class="col-12">
-                                   <p class="card-heading">KADHAI PANEER MASALA HALF</p>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row">
-                                    <p class="col-6 card-price">₹ 80</p>
-                                    <button class="col-2 card-button">Add</button>
-                                    </div>
-                                  </div>
+                                <div class="content">
+                                 <h6 class="card-heading" id="header">MASHROOM MASALA FULL</h6>
+                                 <p class="col-12 card-price">₹ 200</p>
                                 </div>
+                                <button class="col-2 card-button">Add</button>              
                               </div>
 
                               <div class="card">
-                                <div class="row">
-                                  <div class="col-12">
-                                   <p class="card-heading">MASHROOM MASALA FULL</p>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row">
-                                    <p class="col-6 card-price">₹ 200</p>
-                                    <button class="col-2 card-button">Add</button>
-                                    </div>
-                                  </div>
+                                <div class="content">
+                                 <h6 class="card-heading" id="header">MASHROOM MASALA HALF</h6>
+                                 <p class="col-12 card-price">₹ 100</p>
                                 </div>
+                                <button class="col-2 card-button">Add</button>              
                               </div>
 
                               <div class="card">
-                                <div class="row">
-                                  <div class="col-12">
-                                   <p class="card-heading">MASHROOM MASALA HALF</p>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row">
-                                    <p class="col-6 card-price">₹ 100</p>
-                                    <button class="col-2 card-button">Add</button>
-                                    </div>
-                                  </div>
+                                <div class="content">
+                                 <h6 class="card-heading" id="header">MATAR PANEER MASALA FULL</h6>
+                                 <p class="col-12 card-price">₹ 180</p>
                                 </div>
+                                <button class="col-2 card-button">Add</button>              
                               </div>
 
                               <div class="card">
-                                <div class="row">
-                                  <div class="col-12">
-                                   <p class="card-heading">MATAR PANEER MASALA FULL</p>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row">
-                                    <p class="col-6 card-price">₹ 180</p>
-                                    <button class="col-2 card-button">Add</button>
-                                    </div>
-                                  </div>
+                                <div class="content">
+                                   <h6 class="card-heading" id="header">MATAR PANEER MASALA HALF</h6>
+                                   <p class="col-12 card-price">₹ 90</p>
                                 </div>
+                                   <button class="col-2 card-button">Add</button>
                               </div>
 
                               <div class="card">
-                                <div class="row">
-                                  <div class="col-12">
-                                   <p class="card-heading">MATAR PANEER MASALA HALF</p>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row">
-                                    <p class="col-6 card-price">₹ 90</p>
-                                    <button class="col-2 card-button">Add</button>
-                                    </div>
-                                  </div>
+                                <div class="content">
+                                 <h6 class="card-heading" id="header">MIX VEG</h6>
+                                 <p class="col-12 card-price">₹ 40</p>
                                 </div>
+                                <button class="col-2 card-button">Add</button>              
                               </div>
 
                               <div class="card">
-                                <div class="row">
-                                  <div class="col-12">
-                                   <p class="card-heading">MIX VEG</p>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row">
-                                    <p class="col-6 card-price">₹ 40</p>
-                                    <button class="col-2 card-button">Add</button>
-                                    </div>
-                                  </div>
+                                <div class="content">
+                                 <h6 class="card-heading" id="header">MIX VEG</h6>
+                                 <p class="col-12 card-price">₹ 60</p>
                                 </div>
+                                <button class="col-2 card-button">Add</button>              
                               </div>
 
-                              <div class="card">
-                                <div class="row">
-                                  <div class="col-12">
-                                   <p class="card-heading">MIX VEG</p>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row">
-                                    <p class="col-6 card-price">₹ 60</p>
-                                    <button class="col-2 card-button">Add</button>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              
                             </div>
                           </div>
                         </div>
 
-                        <div class="accordion-item">
+                        <div class="accordion-item" id="bread">
                           <h2 class="accordion-header" id="headingSeven">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
                               <span>
@@ -1022,80 +662,50 @@
                             <div class="accordion-body">
 
                               <div class="card">
-                                <div class="row">
-                                  <div class="col-12">
-                                   <p class="card-heading">BUTTER PARATHA</p>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row">
-                                    <p class="col-6 card-price">₹ 20</p>
-                                    <button class="col-2 card-button">Add</button>
-                                    </div>
-                                  </div>
+                                <div class="content">
+                                 <h6 class="card-heading" id="header">BUTTER PARATHA</h6>
+                                 <p class="col-12 card-price">₹ 20</p>
                                 </div>
+                                <button class="col-2 card-button">Add</button>              
                               </div>
 
                               <div class="card">
-                                <div class="row">
-                                  <div class="col-12">
-                                   <p class="card-heading">CHAPATI</p>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row">
-                                    <p class="col-6 card-price">₹ 20</p>
-                                    <button class="col-2 card-button">Add</button>
-                                    </div>
-                                  </div>
+                                <div class="content">
+                                 <h6 class="card-heading" id="header">CHAPATI</h6>
+                                 <p class="col-12 card-price">₹ 20</p>
                                 </div>
+                                <button class="col-2 card-button">Add</button>              
+                              </div>
+                              
+                              <div class="card">
+                                <div class="content">
+                                 <h6 class="card-heading" id="header">FULKA TAWA ROTI</h6>
+                                 <p class="col-12 card-price">₹ 5</p>
+                                </div>
+                                <button class="col-2 card-button">Add</button>              
                               </div>
 
                               <div class="card">
-                                <div class="row">
-                                  <div class="col-12">
-                                   <p class="card-heading">FULKA TAWA ROTI</p>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row">
-                                    <p class="col-6 card-price">₹ 5</p>
-                                    <button class="col-2 card-button">Add</button>
-                                    </div>
-                                  </div>
+                                <div class="content">
+                                 <h6 class="card-heading" id="header">LACHCHHA PARATHA</h6>
+                                 <p class="col-12 card-price">₹ 15</p>
                                 </div>
+                                <button class="col-2 card-button">Add</button>              
                               </div>
 
                               <div class="card">
-                                <div class="row">
-                                  <div class="col-12">
-                                   <p class="card-heading">LACHCHHA PARATHA</p>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row">
-                                    <p class="col-6 card-price">₹ 15</p>
-                                    <button class="col-2 card-button">Add</button>
-                                    </div>
-                                  </div>
+                                <div class="content">
+                                 <h6 class="card-heading" id="header">TRIANGLE PARATHA</h6>
+                                 <p class="col-12 card-price">₹ 15</p>
                                 </div>
-                              </div>
-
-                              <div class="card">
-                                <div class="row">
-                                  <div class="col-12">
-                                   <p class="card-heading">TRIANGLE PARATHA</p>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row">
-                                    <p class="col-6 card-price">₹ 15</p>
-                                    <button class="col-2 card-button">Add</button>
-                                    </div>
-                                  </div>
-                                </div>
+                                <button class="col-2 card-button">Add</button>              
                               </div>
 
                             </div>
                           </div>
                         </div>
 
-                        <div class="accordion-item">
+                        <div class="accordion-item" id="rice">
                           <h2 class="accordion-header" id="headingEight">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
                               <span>
@@ -1107,67 +717,43 @@
                             <div class="accordion-body">
 
                               <div class="card">
-                                <div class="row">
-                                  <div class="col-12">
-                                   <p class="card-heading">NAMKEEN PULAO</p>
-                                   <p class="card-sub-heading">FULL</p>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row">
-                                    <p class="col-6 card-price">₹ 80 <span class="normal-price">₹80</span><span class="discount">(0%)</span></p>
-                                    <button class="col-2 card-button">Add</button>
-                                    </div>
-                                  </div>
+                                <div class="content">
+                                 <h6 class="card-heading" id="header">NAMKEEN PULAO</h6>
+                                 <h6 class="card-sub-heading">FULL</h6>
+                                 <p class="col-12 card-price">₹ 80 <span class="normal-price">₹80</span><span class="discount">(0%)</span></p>
                                 </div>
+                                <button class="col-2 card-button">Add</button>              
                               </div>
 
                               <div class="card">
-                                <div class="row">
-                                  <div class="col-12">
-                                   <p class="card-heading">VEG FRIED RICE</p>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row">
-                                    <p class="col-6 card-price">₹ 100</p>
-                                    <button class="col-2 card-button">Add</button>
-                                    </div>
-                                  </div>
+                                <div class="content">
+                                 <h6 class="card-heading" id="header">VEG FRIED RICE</h6>
+                                 <p class="col-12 card-price">₹ 100</p>
                                 </div>
+                                <button class="col-2 card-button">Add</button>              
                               </div>
 
                               <div class="card">
-                                <div class="row">
-                                  <div class="col-12">
-                                   <p class="card-heading">VEG PULAO</p>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row">
-                                    <p class="col-6 card-price">₹ 120</p>
-                                    <button class="col-2 card-button">Add</button>
-                                    </div>
-                                  </div>
+                                <div class="content">
+                                 <h6 class="card-heading" id="header">VEG PULAO</h6>
+                                 <p class="col-12 card-price">₹ 120</p>
                                 </div>
+                                <button class="col-2 card-button">Add</button>              
                               </div>
 
                               <div class="card">
-                                <div class="row">
-                                  <div class="col-12">
-                                   <p class="card-heading">JEERA RICE</p>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row">
-                                    <p class="col-6 card-price">₹ 60</p>
-                                    <button class="col-2 card-button">Add</button>
-                                    </div>
-                                  </div>
+                                <div class="content">
+                                 <h6 class="card-heading" id="header">JEERA RICE</h6>
+                                 <p class="col-12 card-price">₹ 60</p>
                                 </div>
-                              </div>
-
+                                <button class="col-2 card-button">Add</button>              
+                              </div> 
+                              
                             </div>
                           </div>
                         </div>
 
-                        <div class="accordion-item">
+                        <div class="accordion-item" id="snacksNonVeg">
                           <h2 class="accordion-header" id="headingNine">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
                               <span>
@@ -1179,186 +765,108 @@
                             <div class="accordion-body">
                               
                               <div class="card">
-                                <div class="row">
-                                  <div class="col-12">
-                                   <p class="card-heading">CHICKEN LOLIPOP FULL</p>
-                                   <p class="card-sub-heading">FULL</p>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row">
-                                    <p class="col-6 card-price">₹ 200 <span class="normal-price">₹200</span><span class="discount">(0%)</span></p>
-                                    <button class="col-2 card-button">Add</button>
-                                    </div>
-                                  </div>
+                                <div class="content">
+                                 <h6 class="card-heading" id="header">CHICKEN LOLIPOP FULL</h6>
+                                 <h6 class="card-sub-heading">FULL</h6>
+                                 <p class="col-12 card-price">₹ 200 <span class="normal-price">₹200</span><span class="discount">(0%)</span></p>
                                 </div>
+                                <button class="col-2 card-button">Add</button>              
                               </div>
 
                               <div class="card">
-                                <div class="row">
-                                  <div class="col-12">
-                                   <p class="card-heading">CHICKEN 65 FULL</p>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row">
-                                    <p class="col-6 card-price">₹ 160</p>
-                                    <button class="col-2 card-button">Add</button>
-                                    </div>
-                                  </div>
+                                <div class="content">
+                                 <h6 class="card-heading" id="header">CHICKEN 65 FULL</h6>
+                                 <p class="col-12 card-price">₹ 160</p>
                                 </div>
+                                <button class="col-2 card-button">Add</button>              
                               </div>
 
                               <div class="card">
-                                <div class="row">
-                                  <div class="col-12">
-                                   <p class="card-heading">CHICKEN 65 HALF</p>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row">
-                                    <p class="col-6 card-price">₹ 80</p>
-                                    <button class="col-2 card-button">Add</button>
-                                    </div>
-                                  </div>
+                                <div class="content">
+                                 <h6 class="card-heading" id="header">CHICKEN 65 HALF</h6>
+                                 <p class="col-12 card-price">₹ 80</p>
                                 </div>
+                                <button class="col-2 card-button">Add</button>              
                               </div>
 
                               <div class="card">
-                                <div class="row">
-                                  <div class="col-12">
-                                   <p class="card-heading">CHICKEN CHILLI (Boneless) FULL</p>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row">
-                                    <p class="col-6 card-price">₹ 150</p>
-                                    <button class="col-2 card-button">Add</button>
-                                    </div>
-                                  </div>
+                                <div class="content">
+                                 <h6 class="card-heading" id="header">CHICKEN CHILLI (Boneless) FULL</h6>
+                                 <p class="col-12 card-price">₹ 150</p>
                                 </div>
+                                <button class="col-2 card-button">Add</button>              
                               </div>
 
                               <div class="card">
-                                <div class="row">
-                                  <div class="col-12">
-                                   <p class="card-heading">CHICKEN CHILLI ( Boneless) HALF</p>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row">
-                                    <p class="col-6 card-price">₹ 80</p>
-                                    <button class="col-2 card-button">Add</button>
-                                    </div>
-                                  </div>
+                                <div class="content">
+                                 <h6 class="card-heading" id="header">CHICKEN CHILLI (Boneless) HALF</h6>
+                                 <p class="col-12 card-price">₹ 80</p>
                                 </div>
+                                <button class="col-2 card-button">Add</button>              
                               </div>
 
                               <div class="card">
-                                <div class="row">
-                                  <div class="col-12">
-                                   <p class="card-heading">CHICKEN CHILLI (With Bone) FULL</p>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row">
-                                    <p class="col-6 card-price">₹ 120</p>
-                                    <button class="col-2 card-button">Add</button>
-                                    </div>
-                                  </div>
+                                <div class="content">
+                                 <h6 class="card-heading" id="header">CHICKEN CHILLI (With Bone) FULL</h6>
+                                 <p class="col-12 card-price">₹ 120</p>
                                 </div>
+                                <button class="col-2 card-button">Add</button>              
                               </div>
 
                               <div class="card">
-                                <div class="row">
-                                  <div class="col-12">
-                                   <p class="card-heading">CHICKEN CHILLI (With Bone) HALF</p>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row">
-                                    <p class="col-6 card-price">₹ 60</p>
-                                    <button class="col-2 card-button">Add</button>
-                                    </div>
-                                  </div>
+                                <div class="content">
+                                 <h6 class="card-heading" id="header">CHICKEN CHILLI (With Bone) HALF</h6>
+                                 <p class="col-12 card-price">₹ 60</p>
                                 </div>
+                                <button class="col-2 card-button">Add</button>              
                               </div>
 
                               <div class="card">
-                                <div class="row">
-                                  <div class="col-12">
-                                   <p class="card-heading">CHICKEN KABAB</p>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row">
-                                    <p class="col-6 card-price">₹ 80</p>
-                                    <button class="col-2 card-button">Add</button>
-                                    </div>
-                                  </div>
+                                <div class="content">
+                                 <h6 class="card-heading" id="header">CHICKEN KABAB</h6>
+                                 <p class="col-12 card-price">₹ 80</p>
                                 </div>
+                                <button class="col-2 card-button">Add</button>              
                               </div>
 
                               <div class="card">
-                                <div class="row">
-                                  <div class="col-12">
-                                   <p class="card-heading">CHICKEN KABAB/Pcs</p>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row">
-                                    <p class="col-6 card-price">₹ 40</p>
-                                    <button class="col-2 card-button">Add</button>
-                                    </div>
-                                  </div>
+                                <div class="content">
+                                 <h6 class="card-heading" id="header">CHICKEN KABAB/Pcs</h6>
+                                 <p class="col-12 card-price">₹ 40</p>
                                 </div>
+                                <button class="col-2 card-button">Add</button>              
                               </div>
 
                               <div class="card">
-                                <div class="row">
-                                  <div class="col-12">
-                                   <p class="card-heading">CHICKEN PAKODA FULL</p>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row">
-                                    <p class="col-6 card-price">₹ 160</p>
-                                    <button class="col-2 card-button">Add</button>
-                                    </div>
-                                  </div>
+                                <div class="content">
+                                 <h6 class="card-heading" id="header">CHICKEN PAKODA FULL</h6>
+                                 <p class="col-12 card-price">₹ 160</p>
                                 </div>
+                                <button class="col-2 card-button">Add</button>              
                               </div>
 
                               <div class="card">
-                                <div class="row">
-                                  <div class="col-12">
-                                   <p class="card-heading">CHICKEN PAKODA HALF</p>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row">
-                                    <p class="col-6 card-price">₹ 80</p>
-                                    <button class="col-2 card-button">Add</button>
-                                    </div>
-                                  </div>
+                                <div class="content">
+                                 <h6 class="card-heading" id="header">CHICKEN PAKODA HALF</h6>
+                                 <p class="col-12 card-price">₹ 80</p>
                                 </div>
+                                <button class="col-2 card-button">Add</button>              
                               </div>
 
                               <div class="card">
-                                <div class="row">
-                                  <div class="col-12">
-                                   <p class="card-heading">CHICKEN SEEKH KABAB</p>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row">
-                                    <p class="col-6 card-price">₹ 180</p>
-                                    <button class="col-2 card-button">Add</button>
-                                    </div>
-                                  </div>
+                                <div class="content">
+                                 <h6 class="card-heading" id="header">CHICKEN SEEKH KABAB</h6>
+                                 <p class="col-12 card-price">₹ 180</p>
                                 </div>
+                                <button class="col-2 card-button">Add</button>              
                               </div>
 
                               <div class="card">
-                                <div class="row">
-                                  <div class="col-12">
-                                   <p class="card-heading">CHICKEN SHAMI KABAB</p>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row">
-                                    <p class="col-6 card-price">₹ 80</p>
-                                    <button class="col-2 card-button">Add</button>
-                                    </div>
-                                  </div>
+                                <div class="content">
+                                 <h6 class="card-heading" id="header">CHICKEN SHAMI KABAB</h6>
+                                 <p class="col-12 card-price">₹ 80</p>
                                 </div>
+                                <button class="col-2 card-button">Add</button>              
                               </div>
 
 
@@ -1366,7 +874,7 @@
                           </div>
                         </div>
 
-                        <div class="accordion-item">
+                        <div class="accordion-item" id="snacksVeg">
                           <h2 class="accordion-header" id="headingTen">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
                               <span>
@@ -1378,95 +886,58 @@
                             <div class="accordion-body">
 
                               <div class="card">
-                                <div class="row">
-                                  <div class="col-12">
-                                   <p class="card-heading">MASHROOM CHILLI FULL</p>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row">
-                                    <p class="col-6 card-price">₹ 160</p>
-                                    <button class="col-2 card-button">Add</button>
-                                    </div>
-                                  </div>
+                                <div class="content">
+                                 <h6 class="card-heading" id="header">MASHROOM CHILLI FULL</h6>
+                                 <p class="col-12 card-price">₹ 160</p>
                                 </div>
+                                <button class="col-2 card-button">Add</button>              
                               </div>
 
                               <div class="card">
-                                <div class="row">
-                                  <div class="col-12">
-                                   <p class="card-heading">MASHROOM CHILLI HALF</p>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row">
-                                    <p class="col-6 card-price">₹ 80</p>
-                                    <button class="col-2 card-button">Add</button>
-                                    </div>
-                                  </div>
+                                <div class="content">
+                                 <h6 class="card-heading" id="header">MASHROOM CHILLI HALF</h6>
+                                 <p class="col-12 card-price">₹ 80</p>
                                 </div>
+                                <button class="col-2 card-button">Add</button>              
                               </div>
 
                               <div class="card">
-                                <div class="row">
-                                  <div class="col-12">
-                                   <p class="card-heading">PANEER CHILLI FULL</p>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row">
-                                    <p class="col-6 card-price">₹ 160</p>
-                                    <button class="col-2 card-button">Add</button>
-                                    </div>
-                                  </div>
+                                <div class="content">
+                                 <h6 class="card-heading" id="header">PANEER CHILLI FULL</h6>
+                                 <p class="col-12 card-price">₹ 160</p>
                                 </div>
+                                <button class="col-2 card-button">Add</button>              
                               </div>
 
                               <div class="card">
-                                <div class="row">
-                                  <div class="col-12">
-                                   <p class="card-heading">PANEER CHILLI HALF</p>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row">
-                                    <p class="col-6 card-price">₹ 80</p>
-                                    <button class="col-2 card-button">Add</button>
-                                    </div>
-                                  </div>
+                                <div class="content">
+                                 <h6 class="card-heading" id="header">PANEER CHILLI HALF</h6>
+                                 <p class="col-12 card-price">₹ 80</p>
                                 </div>
+                                <button class="col-2 card-button">Add</button>              
                               </div>
 
                               <div class="card">
-                                <div class="row">
-                                  <div class="col-12">
-                                   <p class="card-heading">PANEER PAKODA FULL</p>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row">
-                                    <p class="col-6 card-price">₹ 140</p>
-                                    <button class="col-2 card-button">Add</button>
-                                    </div>
-                                  </div>
+                                <div class="content">
+                                 <h6 class="card-heading" id="header">PANEER PAKODA FULL</h6>
+                                 <p class="col-12 card-price">₹ 140</p>
                                 </div>
+                                <button class="col-2 card-button">Add</button>              
                               </div>
 
                               <div class="card">
-                                <div class="row">
-                                  <div class="col-12">
-                                   <p class="card-heading">PANEER PAKODA HALF</p>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row">
-                                    <p class="col-6 card-price">₹ 80</p>
-                                    <button class="col-2 card-button">Add</button>
-                                    </div>
-                                  </div>
+                                <div class="content">
+                                 <h6 class="card-heading" id="header">PANEER PAKODA HALF</h6>
+                                 <p class="col-12 card-price">₹ 80</p>
                                 </div>
-                              </div>  
-
+                                <button class="col-2 card-button">Add</button>              
+                              </div>
 
                             </div>
                           </div>
                         </div>
 
-                        <div class="accordion-item">
+                        <div class="accordion-item" id="noodles">
                           <h2 class="accordion-header" id="headingEleven">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">
                               <span>
@@ -1478,188 +949,108 @@
                             <div class="accordion-body">
 
                               <div class="card">
-                                <div class="row">
-                                  <div class="col-12">
-                                   <p class="card-heading">CHEESE ROLL</p>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row">
-                                    <p class="col-6 card-price">₹ 100</p>
-                                    <button class="col-2 card-button">Add</button>
-                                    </div>
-                                  </div>
+                                <div class="content">
+                                 <h6 class="card-heading" id="header">CHEESE ROLL</h6>
+                                 <p class="col-12 card-price">₹ 100</p>
                                 </div>
+                                <button class="col-2 card-button">Add</button>              
                               </div>
 
                               <div class="card">
-                                <div class="row">
-                                  <div class="col-12">
-                                   <p class="card-heading">CHICKEN NOODLES FULL</p>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row">
-                                    <p class="col-6 card-price">₹ 120</p>
-                                    <button class="col-2 card-button">Add</button>
-                                    </div>
-                                  </div>
+                                <div class="content">
+                                 <h6 class="card-heading" id="header">CHICKEN NOODLES FULL</h6>
+                                 <p class="col-12 card-price">₹ 120</p>
                                 </div>
+                                <button class="col-2 card-button">Add</button>              
                               </div>
 
                               <div class="card">
-                                <div class="row">
-                                  <div class="col-12">
-                                   <p class="card-heading">CHICKEN NOODLES HALF</p>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row">
-                                    <p class="col-6 card-price">₹ 60</p>
-                                    <button class="col-2 card-button">Add</button>
-                                    </div>
-                                  </div>
+                                <div class="content">
+                                 <h6 class="card-heading" id="header">CHICKEN NOODLES HALF</h6>
+                                 <p class="col-12 card-price">₹ 60</p>
                                 </div>
+                                <button class="col-2 card-button">Add</button>              
                               </div>
 
                               <div class="card">
-                                <div class="row">
-                                  <div class="col-12">
-                                   <p class="card-heading">CHICKEN ROLL</p>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row">
-                                    <p class="col-6 card-price">₹ 80</p>
-                                    <button class="col-2 card-button">Add</button>
-                                    </div>
-                                  </div>
+                                <div class="content">
+                                 <h6 class="card-heading" id="header">CHICKEN ROLL</h6>
+                                 <p class="col-12 card-price">₹ 80</p>
                                 </div>
+                                <button class="col-2 card-button">Add</button>              
                               </div>
 
                               <div class="card">
-                                <div class="row">
-                                  <div class="col-12">
-                                   <p class="card-heading">EGG NOODLES FULL</p>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row">
-                                    <p class="col-6 card-price">₹ 80</p>
-                                    <button class="col-2 card-button">Add</button>
-                                    </div>
-                                  </div>
+                                <div class="content">
+                                 <h6 class="card-heading" id="header">EGG NOODLES FULL</h6>
+                                 <p class="col-12 card-price">₹ 80</p>
                                 </div>
+                                <button class="col-2 card-button">Add</button>              
                               </div>
 
                               <div class="card">
-                                <div class="row">
-                                  <div class="col-12">
-                                   <p class="card-heading">EGG NOODLES HALF</p>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row">
-                                    <p class="col-6 card-price">₹ 40</p>
-                                    <button class="col-2 card-button">Add</button>
-                                    </div>
-                                  </div>
+                                <div class="content">
+                                 <h6 class="card-heading" id="header">EGG NOODLES HALF</h6>
+                                 <p class="col-12 card-price">₹ 40</p>
                                 </div>
+                                <button class="col-2 card-button">Add</button>              
                               </div>
 
                               <div class="card">
-                                <div class="row">
-                                  <div class="col-12">
-                                   <p class="card-heading">EGG ROLL</p>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row">
-                                    <p class="col-6 card-price">₹ 40</p>
-                                    <button class="col-2 card-button">Add</button>
-                                    </div>
-                                  </div>
+                                <div class="content">
+                                 <h6 class="card-heading" id="header">EGG ROLL</h6>
+                                 <p class="col-12 card-price">₹ 40</p>
                                 </div>
+                                <button class="col-2 card-button">Add</button>              
                               </div>
 
                               <div class="card">
-                                <div class="row">
-                                  <div class="col-12">
-                                   <p class="card-heading">PANEER NOODLES FULL</p>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row">
-                                    <p class="col-6 card-price">₹ 120</p>
-                                    <button class="col-2 card-button">Add</button>
-                                    </div>
-                                  </div>
+                                <div class="content">
+                                 <h6 class="card-heading" id="header">PANEER NOODLES FULL</h6>
+                                 <p class="col-12 card-price">₹ 120</p>
                                 </div>
+                                <button class="col-2 card-button">Add</button>              
                               </div>
 
                               <div class="card">
-                                <div class="row">
-                                  <div class="col-12">
-                                   <p class="card-heading">PANEER NOODLES HALF</p>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row">
-                                    <p class="col-6 card-price">₹ 60</p>
-                                    <button class="col-2 card-button">Add</button>
-                                    </div>
-                                  </div>
+                                <div class="content">
+                                 <h6 class="card-heading" id="header">PANEER NOODLES HALF</h6>
+                                 <p class="col-12 card-price">₹ 60</p>
                                 </div>
+                                <button class="col-2 card-button">Add</button>              
                               </div>
 
                               <div class="card">
-                                <div class="row">
-                                  <div class="col-12">
-                                   <p class="card-heading">PANEER ROLL</p>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row">
-                                    <p class="col-6 card-price">₹ 80</p>
-                                    <button class="col-2 card-button">Add</button>
-                                    </div>
-                                  </div>
+                                <div class="content">
+                                 <h6 class="card-heading" id="header">PANEER ROLL</h6>
+                                 <p class="col-12 card-price">₹ 80</p>
                                 </div>
+                                <button class="col-2 card-button">Add</button>              
                               </div>
 
                               <div class="card">
-                                <div class="row">
-                                  <div class="col-12">
-                                   <p class="card-heading">VEG NOODLES FULL</p>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row">
-                                    <p class="col-6 card-price">₹ 60</p>
-                                    <button class="col-2 card-button">Add</button>
-                                    </div>
-                                  </div>
+                                <div class="content">
+                                 <h6 class="card-heading" id="header">VEG NOODLES FULL</h6>
+                                 <p class="col-12 card-price">₹ 60</p>
                                 </div>
+                                <button class="col-2 card-button">Add</button>              
                               </div>
 
                               <div class="card">
-                                <div class="row">
-                                  <div class="col-12">
-                                   <p class="card-heading">VEG NOODLES HALF</p>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row">
-                                    <p class="col-6 card-price">₹ 30</p>
-                                    <button class="col-2 card-button">Add</button>
-                                    </div>
-                                  </div>
+                                <div class="content">
+                                 <h6 class="card-heading" id="header">VEG NOODLES HALF</h6>
+                                 <p class="col-12 card-price">₹ 30</p>
                                 </div>
+                                <button class="col-2 card-button">Add</button>              
                               </div>
 
                               <div class="card">
-                                <div class="row">
-                                  <div class="col-12">
-                                   <p class="card-heading">VEG ROLL</p>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row">
-                                    <p class="col-6 card-price">₹ 30</p>
-                                    <button class="col-2 card-button">Add</button>
-                                    </div>
-                                  </div>
+                                <div class="content">
+                                 <h6 class="card-heading" id="header">VEG ROLL</h6>
+                                 <p class="col-12 card-price">₹ 30</p>
                                 </div>
+                                <button class="col-2 card-button">Add</button>              
                               </div>
-
-
 
                             </div>
                           </div>
@@ -1668,28 +1059,127 @@
                       </div>
                     </div>
 
+                      <div class="cart">
+                        
+                        <div class="cart-content">
+                          <!-- <div class="card">
+                            <div class="content">
+                             <h6 class="card-heading" id="header">PANEER PAKODA HALF</h6>
+                             <p class="col-12 card-price">₹ 80</p>
+                            </div>
+                            <input type="number" id="quantity" class="quantity" name="quantity" value="1">                          
+                            <button class="col-2 remove-button">Remove</button>              
+                          </div>
+                          <hr>
+                          <div class="card">
+                            <div class="content">
+                             <h6 class="card-heading" id="header">PANEER PAKODA HALF</h6>
+                             <p class="col-12 card-price">₹ 80</p>
+                            </div>
+                            <input type="number" id="quantity" class="quantity" name="quantity" value="2">
+                            <button class="col-2 remove-button">Remove</button>              
+                          </div> -->
+                        </div>
+                        <div class="total-content">
+                          <div class="sub-total">
+                            <h6 class="sub-total">Sub Total</h6>
+                            <p class="sub-total-price">₹ 0</p>
+                          </div>
+  
+                          <div class="total">
+                            <h6 class="total">Total</h6>
+                            <p class="total-price">₹ 0</p>
+                          </div>
+                        </div>
+
+                     </div>
+
                     <div class="row">
                       <div class="label col-12">
-                          <label for="select-items "><span>*</span>Full Name:</label>
+                          <label for="full-name"><span>*</span>Full Name:</label>
                       </div>
                       <div class="input col-12">
-                          <input type="text" name="select-items" id="select-items" placeholder="Name">
+                          <input type="text" name="full-name" id="full-name" placeholder="Name" required>
                       </div>
-                     
-                  </div>
+                    </div>
 
                   <div class="row">
                     <div class="label col-12">
-                        <label for="select-items "><span>*</span>Select Items from Menu Below:</label>
+                        <label for="mobile-number"><span>*</span>Mobile Number:</label>
                     </div>
                     <div class="input col-12">
-                        <input type="text" name="select-items" id="select-items" placeholder="Enter item name to search">
+                        <input type="number" name="mobile-number" id="mobile-number" placeholder="Mobile Number" required>
                     </div>
-                   
+                 </div>
+
+                 <div class="row">
+                  <div class="label col-12">
+                      <label for="address"><span>*</span>Delivery Address:</label>
+                  </div>
+                  <div class="input col-12">
+                    <textarea type="text" id="address" name="Address" placeholder="Delivery Address" required></textarea>
+                  </div>
+               </div>
+
+               <div class="row">
+                <div class="label col-12">
+                    <label for="charges"><span>*</span>Delivery Charges:</label>
                 </div>
+                <div class="input col-12" id="select">
+                <select class="form-select" aria-label="Default select example" id="charges">
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+              </div>
+             </div>
+               
                 </form>
             </div>
         </div>
     </section>
+
+    <!-- Contact Us -->
+    <section id="contact">
+      <div class="container">
+        <div class="about-us">
+          <h4 class="specials-heading">ABOUT US</h4>
+            <p>Our menu spotlights a delicious food collection of Chinese and regional Indian cuisine. Vegetarian Chinese, non-vegetarian Chinese, vegetarian Punjabi, Non-vegetarian Punjabi, and a wide range of mouth-watering items grace our menu all the time.</p>
+        </div>
+        <div class="contact-us">
+          <h4 class="specials-heading">CONTACT US</h4>
+          <div>
+            <a href="tel:8709554584"><i class="fas fa-mobile-alt"></i> 8709554584</a>
+          </div>
+          <div>
+            <a href="mailto:nitesh.verma2569@gmail.com" target="_blank"><i class="far fa-envelope"></i>nitesh.verma2569@gmail.com</a>
+          </div>
+          <div>
+            <a href="https://www.google.com/maps/place/5WJP%2B8HW+PIHAR+GARDEN+ASNA,+AT-+ASNA+MORE,+ASNA,+PS,+Palojori,+Jharkhand+814146/data=!4m2!3m1!1s0x39f0d5d138045975:0x9a1b5010cc2132d3?utm_source=mstt_1&entry=gps" target="_blank"><p><i class="fa-solid fa-location-dot"></i>At- Asna More, Asna, Ps- Palojori <br> Deoghar,Jharkhand,IND,814146</p></a>
+          </div>
+        </div>
+        <div class="opening-hours">
+          <h4 class="specials-heading">OPENING HOURS</h4>
+          <div class="row">
+            <div class="col-5 one">Sun: 6:00 AM - 8:00 PM</div>
+            <div class="col-5 two">Mon: 6:00 AM - 8:00 PM</div>
+          </div>
+          <div class="row">
+            <div class="col-5 one">Tue: 6:00 AM - 8:00 PM</div>
+            <div class="col-5 two">Wed: 6:00 AM - 8:00 PM</div>
+        </div>
+          <div class="row">
+            <div class="col-5 one">Thur: 6:00 AM - 8:00 PM</div>
+            <div class="col-5 two">Fri: 6:30 AM - 8:00 PM</div>
+          </div>
+          <div class="row">
+            <div class="col-5 one">Sat: 6:00 AM - 8:00 PM</div>
+          </div>
+        </div>
+        
+      </div>
+    </section>
+
+    <script src="store.js" async></script>
   </body>
 </html>

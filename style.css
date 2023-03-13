@@ -155,7 +155,8 @@ main {
   margin-left: 20px;
 }
 
-.input input {
+.input input,
+textarea {
   width: 95%;
   height: 5vh;
   padding: 0rem 1rem;
@@ -163,12 +164,25 @@ main {
   border: none;
 }
 
-input:focus {
+input:focus,
+textarea:focus {
   outline: 1px solid #108ee9;
 }
 
-#acccordion-container {
+textarea {
+  height: auto;
+  border-radius: 10px;
 }
+
+select {
+  border-radius: 25px !important;
+}
+
+#select {
+  padding: 0rem 2rem;
+}
+
+/* Accordion */
 
 #Accordion {
   margin: 2rem 0rem;
@@ -238,11 +252,17 @@ input:focus {
 .accordion-body {
   background-color: #48494b;
 }
+.accordion-body1 {
+  background-color: #48494b;
+}
 .card {
   background-color: #48494b !important;
   padding: 0.5rem 1.2rem;
   border: 1px solid #ffffff !important;
   margin-bottom: 10px;
+  display: flex;
+  flex-direction: row !important;
+  justify-content: space-between;
 }
 .card-price {
   text-align: left;
@@ -262,6 +282,14 @@ input:focus {
   color: #ffffff;
 }
 
+.sub-total,
+.sub-total-price,
+.total,
+.total-price {
+  color: #ffffff;
+  text-align: right;
+}
+
 .normal-price {
   text-decoration: line-through;
   font-size: small;
@@ -271,10 +299,99 @@ input:focus {
 }
 
 .card-button {
-  margin-left: auto;
+  margin-top: 20px;
   border: none;
   border-radius: 25px;
   color: #48494b;
   background-color: #e0b138;
   padding: 0.5rem 1rem;
+}
+
+.remove-button {
+  margin-top: 20px;
+  border: none;
+  border-radius: 25px;
+  color: #ffffff;
+  background-color: red;
+  padding: 0.5rem 1rem;
+}
+
+.hide {
+  display: none;
+}
+
+.cart .card {
+  margin: 0.25rem 0rem;
+  padding: 1rem;
+}
+.cart {
+  background-color: #48494b !important;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #ffffff !important;
+  margin: 0rem 0.75rem;
+  /* margin-bottom: 10px;
+  display: flex;
+  flex-direction: row !important;
+  justify-content: space-between; */
+}
+.cart .card-button {
+  margin: 0px;
+}
+.cart hr {
+  color: #ffffff;
+}
+
+.container {
+  padding: 1rem;
+}
+
+#quantity {
+  /* appearance: none; */
+  width: 50px;
+  height: 30px;
+  padding: 5px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Contact Us */
+
+#contact {
+  background-color: #ffffff;
+  color: #48494b;
+}
+/* Opening Hours */
+a {
+  text-decoration: none !important;
+}
+#contact a,
+h3 {
+  color: #48494b;
+}
+#contact .container {
+  display: flex;
+  justify-content: space-between;
+}
+.about-us {
+  max-width: 30%;
+}
+.contact-us {
+  max-width: 50%;
+}
+.opening-hours {
+  width: 40%;
+  text-align: center;
+  display: grid;
+  grid-gap: 2;
+}
+#contact .col-5 {
+  padding: 0px;
+  border-top: 2px solid #48494b;
+  border-bottom: 2px solid #48494b;
+  margin: 0rem 1rem;
+}
+
+.two {
+  text-align: left;
 }
